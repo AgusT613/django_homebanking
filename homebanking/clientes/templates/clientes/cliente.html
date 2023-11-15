@@ -1,4 +1,17 @@
-{% extends "clientes/base.html" %}
+{% extends "globals/index.html" %}
+
+{% block styles %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'clientes/index.css' %}">
+{% endblock %}
+
+{% block head_title %}
+Clientes
+{% endblock %}
+
+{% block title %}
+Clientes
+{% endblock %}
 
 {% block content %}
 {% if info_cliente %}

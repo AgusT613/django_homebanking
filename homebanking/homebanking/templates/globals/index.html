@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/globals.css' %}">
+    {% block styles %}
+    {% endblock %}
+    <title>Homebanking - {% block head_title %}{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <h1>Página {% block title %}{% endblock %}</h1>
+        <nav class="homebanking_nav">
+            <ul>
+                <li>
+                    <a href="http://localhost:8000/clientes/1">Cliente</a>
+                </li>
+                <li>
+                    <a href="http://localhost:8000/cuentas/1">Cuenta</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>

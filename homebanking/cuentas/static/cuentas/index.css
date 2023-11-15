@@ -1,0 +1,39 @@
+.user_title,
+.container_cuentas article{
+    border-radius: .25rem;
+}
+
+.user_title{
+    padding: .5rem;
+    margin-bottom: .5rem;
+    background: rgba(206, 27, 27, 0.573);
+}
+
+.container_cuentas{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: .5rem;
+}
+
+.container_cuentas article{
+    padding: 1rem;
+    background: rgba(0, 0, 0, .5);
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+}
+
+.container_cuentas article div{
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+}
+
+.container_cuentas article h5{
+    font-size: 1.15rem;
+}
+
+.container_cuentas article p{
+    color: #ddd;
+    text-indent: .5rem;
+}
