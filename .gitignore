@@ -1,6 +1,7 @@
 # Files
 docs
 models-itbank.py
+preguntas.txt
 
 # Django #
 *.log
