@@ -1,0 +1,41 @@
+{% extends "clientes/base.html" %}
+
+{% block content %}
+{% if info_cliente %}
+<section class="info_cliente_container">
+    <h2>Información y Datos</h2>
+    <form class="form_datos">
+        <div class="form_datos__label">
+            <label for="usuario">Nombre de Usuario</label>
+            <input name="usuario" type="text" readonly value="{{ info_cliente.usuario }}">
+        </div>
+        <div class="form_datos__label">
+            <label for="tipo_cliente">Tipo de Cliente</label>
+            <input name="tipo_cliente" type="text" readonly value="{{ info_cliente.tipo_cliente }}">
+        </div>
+        <div class="form_datos__label">
+            <label for="nombre">Nombre</label>
+            <input name="nombre" type="text" readonly value="{{ info_cliente.nombre }}">
+        </div>
+        <div class="form_datos__label">
+            <label for="apellido">Apellido</label>
+            <input name="apellido" type="text" readonly value="{{ info_cliente.apellido }}">
+        </div>
+        <div class="form_datos__label">
+            <label for="dni">Número DNI</label>
+            <input name="dni" type="text" readonly value="{{ info_cliente.dni }}">
+        </div>
+        <div class="form_datos__label">
+            <label for="fecha_nacimiento">Fecha Nacimiento</label>
+            <input name="fecha_nacimiento" type="text" readonly value="{{ info_cliente.fecha_nacimiento }}">
+        </div>
+        <div class="form_datos__label">
+            <label for="sucursal">Id de Sucursal</label>
+            <input name="sucursal" type="text" readonly value="{{ info_cliente.sucursal }}">
+        </div>
+    </form>
+</section>
+{% else %}
+<h3>No se encontró el usuario</h3>
+{% endif %}
+{% endblock %}
