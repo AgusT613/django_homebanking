@@ -13,3 +13,15 @@ def index(request, user_id):
     context = {"cuenta": datos, "cliente": cliente, "id_cliente": user_id}
 
     return render(request, "cuentas/informacion.html", context)
+
+def crear_cuenta(request):
+    if request.method == 'POST':
+        tipo = request.POST.get('tipo')
+        saldo = request.POST.get('saldo')
+        iban = request.POST.get('iban')
+
+        if tipo and saldo and iban:
+            nueva_cuenta = Cuenta(tipo=tipo, saldo=saldo, iban=iban, cliente=request.user.cliente)
+            nueva_cuenta.save()
+
+    return render(request, "cuentas/crear_cuenta.html")

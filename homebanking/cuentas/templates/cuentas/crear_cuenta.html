@@ -1,0 +1,26 @@
+{% extends 'globals/index.html' %}
+{% block styles %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'cuentas/index.css' %}">
+{% endblock %}
+
+{% block content %}
+<h2>Crear Cuenta Bancaria</h2>
+<div class="formulario">
+    <form method="post" >
+        {% csrf_token %}
+        
+        <label for="tipocuenta">Tipo de Cuenta:</label>
+        <input type="text" name="tipo" required>
+        <br>
+        <label for="balance">Saldo Inicial:</label>
+        <input type="number" name="saldo" required>
+        <br>
+        <label for="iban">IBAN:</label>
+        <input type="number" name="iban" required>
+        <br>
+        <input type="submit" value="Crear Cuenta">
+    </form>
+</div>
+{% endblock %}
+
