@@ -12,15 +12,10 @@
 <body>
     <header>
         <h1>Página {% block title %}{% endblock %}</h1>
+        <h2>Bienvenido/a {% block nombre_cliente %}{% endblock %}</h2>
         <nav class="homebanking_nav">
-            <ul>
-                <li>
-                    <a href="http://localhost:8000/clientes/1">Cliente</a>
-                </li>
-                <li>
-                    <a href="http://localhost:8000/cuentas/1">Cuenta</a>
-                </li>
-            </ul>
+            {% block navigation %}
+            {% endblock %}
         </nav>
     </header>
 

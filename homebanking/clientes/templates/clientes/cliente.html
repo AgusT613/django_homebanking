@@ -13,6 +13,15 @@ Clientes
 Clientes
 {% endblock %}
 
+{% block nombre_cliente %}
+{{ info_cliente.nombre }}
+{% endblock %}
+
+
+{% block navigation %}
+    {% include "globals/header.html" with id_cliente=id_cliente %}
+{% endblock %}
+
 {% block content %}
 {% if info_cliente %}
 <section class="info_cliente_container">

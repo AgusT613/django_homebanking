@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     "prestamos.apps.PrestamosConfig",
     "tarjetas.apps.TarjetasConfig",
     "empleado.apps.EmpleadoConfig",
+    "login.apps.LoginConfig",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
