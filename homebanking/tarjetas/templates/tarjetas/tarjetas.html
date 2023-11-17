@@ -1,0 +1,14 @@
+{% extends 'globals/index.html' %}
+{% block styles %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'tarjetas/index.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<h2>Listado de Tarjetas</h2>
+{% for tarjeta in tarjetas %}
+    <p>Tipo: {{ tarjeta.tipo }}, Número: {{ tarjeta.numero }}</p>
+{% endfor %}
+
+{% endblock %}
