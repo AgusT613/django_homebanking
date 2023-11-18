@@ -1,19 +1,79 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/globals.css' %}">
+    <link rel="stylesheet" href="{% static 'static/index.css' %}">
     <title>Login</title>
+    <style>
+        .principal{
+            height: calc(100vh - 5rem);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .login_container{
+            border-radius: .5rem;
+            height: 70vh;
+            width: 45%;
+            background: rgba(0, 0, 0, .2);
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .login_container div{
+            display: flex;
+            gap: .5rem;
+            flex-direction: column;
+        }
+
+        .login_container div label{
+            font-size: 1.25rem;
+        }
+
+        .login_container div input{
+            width: 100%;
+            padding: .5rem;
+            border-radius: .5rem;
+        }
+
+        .login_container div .btn_enviar{
+            padding: .5rem;
+            width: 10rem;
+            border-radius: .5rem;
+            cursor: pointer;
+        }
+
+        .login_container div .btn_enviar:hover{
+            background: #aaa;
+        }
+    </style>
 </head>
 <body>
-    <h1>Login</h1>
-    <form method="POST">
-        {% csrf_token %}
-        <label for="username">Nombre de usuario</label>
-        <input type="text" name="username">
-        <label for="password">Contraseña</label>
-        <input type="password" name="password">
-        <input type="submit">
-    </form>
+    <header>
+        <h1>Iniciar Sesión</h1>
+    </header>
+    <main class="principal">
+        <form method="POST" class="login_container">
+            {% csrf_token %}
+            <div>
+                <label for="username">Nombre de usuario</label>
+                <input type="text" name="username">
+            </div>
+            <div>
+                <label for="password">Contraseña</label>
+                <input type="password" name="password">
+            </div>
+            <div>
+                <input type="submit" class="btn_enviar">
+            </div>
+        </form>
+    </main>
 </body>
 </html>

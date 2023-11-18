@@ -34,10 +34,8 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     "clientes.apps.ClientesConfig",
     "cuentas.apps.CuentasConfig",
-    "movimientos.apps.MovimientosConfig",
     "prestamos.apps.PrestamosConfig",
     "tarjetas.apps.TarjetasConfig",
-    "empleado.apps.EmpleadoConfig",
     "login.apps.LoginConfig",
     "django.contrib.admin",
     "django.contrib.auth",

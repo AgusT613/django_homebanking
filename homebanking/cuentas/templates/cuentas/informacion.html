@@ -12,6 +12,10 @@ Cuentas
 Cuentas
 {% endblock %}
 
+{% block nombre_cliente %}
+{{ cliente.customer_name }}
+{% endblock %}
+
 {% block navigation %}
 {% include "globals/header.html" with id_cliete=id_cliente %}
 {% endblock %}

@@ -4,6 +4,22 @@
 <link rel="stylesheet" href="{% static 'cuentas/index.css' %}">
 {% endblock %}
 
+{% block head_title %}
+Crear Cuenta
+{% endblock %}
+
+{% block title %}
+Crear Cuenta
+{% endblock %}
+
+{% block nombre_cliente %}
+{{ info_cliente }}
+{% endblock %}
+
+{% block navigation %}
+    {% include "globals/header.html" with id_cliente=id_cliente %}
+{% endblock %}
+
 {% block content %}
 <h2>Crear Cuenta Bancaria</h2>
 <div class="formulario">

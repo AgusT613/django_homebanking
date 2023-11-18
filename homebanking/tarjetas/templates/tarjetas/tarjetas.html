@@ -4,11 +4,32 @@
 <link rel="stylesheet" href="{% static 'tarjetas/index.css' %}">
 {% endblock %}
 
+{% block head_title %}
+Tarjetas
+{% endblock %}
+
+{% block title %}
+Tarjetas
+{% endblock %}
+
+{% block nombre_cliente %}
+{{ nombre_cliente }}
+{% endblock %}
+
+{% block navigation %}
+    {% include "globals/header.html" with id_cliente=id_cliente %}
+{% endblock %}
+
 {% block content %}
-
-<h2>Listado de Tarjetas</h2>
-{% for tarjeta in tarjetas %}
-    <p>Tipo: {{ tarjeta.tipo }}, Número: {{ tarjeta.numero }}</p>
-{% endfor %}
-
+    <h2>Listado de Tarjetas</h2>
+    {% if sin_clientes %}
+        <p>El cliente no existe</p>
+    {% endif %}
+    {% if tarjetas %}
+        {% for tarjeta in tarjetas %}
+            <p>Tipo: {{ tarjeta.tipo }}, Número: {{ tarjeta.numero }}</p>
+        {% endfor %}
+    {% else %}
+        <p>El cliente no posee tarjetas activas</p>
+    {% endif %}
 {% endblock %}

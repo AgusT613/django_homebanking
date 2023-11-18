@@ -3,7 +3,7 @@ from .models import Cliente
 from django.contrib.auth.decorators import login_required
 
 
-@login_required(login_url="/login/")
+@login_required(login_url="/")
 def index(request, user_id):
     try:
         cliente = Cliente.objects.get(user_id=user_id)
